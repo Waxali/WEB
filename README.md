@@ -1,4 +1,4 @@
-# Welcome to the [Project Name] Repository!
+# Welcome to the [WEB] Repository!
 
 ## 📜 Overview
 
