@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>DWS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<br></br>
+<br></br>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма реєстрації</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .gender-selection {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .gender-selection label {
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="registrationForm" action="file:///C:/Users/User/Desktop/%D0%A1%D0%B0%D0%B9%D1%82/information.html" method="post">
+            <h2>Форма реєстрації</h2>
+
+            <label for="name">ПІБ:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Номер телефону:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+38 (XXX) XXX-XX-XX" required>
+
+            <label for="zip">Поштовий індекс:</label>
+            <input type="text" id="zip" name="zip" required pattern="\d{5}">
+
+            <label for="gender">Стать:</label>
+            <div class="gender-selection">
+                <label><input type="radio" name="gender" value="male" required> Чоловіча</label>
+                <label><input type="radio" name="gender" value="female"> Жіноча</label>
+                <label><input type="radio" name="gender" value="other"> Інша</label>
+            </div>
+
+            <button type="submit">Зареєструватись</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const phoneInput = document.getElementById("phone");
+
+            phoneInput.addEventListener("input", function (e) {
+                let value = e.target.value;
+                value = value.replace(/\D/g, "");
+
+                if (value.length > 3 && value.length <= 6) {
+                    value = value.replace(/^(\d{3})(\d+)/, "+38 ($1) $2");
+                } else if (value.length > 6 && value.length <= 8) {
+                    value = value.replace(/^(\d{3})(\d{3})(\d+)/, "+38 ($1) $2-$3");
+                } else if (value.length > 8) {
+                    value = value.replace(/^(\d{3})(\d{3})(\d{2})(\d+)/, "+38 ($1) $2-$3-$4");
+                } else {
+                    value = value.replace(/^(\d*)/, "+38 $1");
+                }
+
+                e.target.value = value;
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const genderOther = document.querySelector('input[name="gender"][value="other"]');
+        
+        genderOther.addEventListener("change", function () {
+            if (genderOther.checked) {
+                window.location.href = "file:///C:/Users/User/Desktop/%D0%A1%D0%B0%D0%B9%D1%82/LGBT.html"; // Change to the desired URL
+            }
+        });
+    });
+    </script>
+</body>
+</html>

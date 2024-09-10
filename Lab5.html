@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Завдання</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label, button, input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button.cancel {
+            background-color: #dc3545;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        #date-time {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            transition: opacity 0.3s;
+        }
+
+        .logo img:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div id="date-time" class="container"></div>
+    <div class="container">
+        <h2>Форма для введення</h2>
+        <form id="inputForm">
+            <label for="inputField">Введіть значення:</label>
+            <input type="text" id="inputField" name="inputField">
+            <button type="button" id="okButton">ОК</button>
+            <button type="button" class="cancel" id="cancelButton">ОТМЕНА</button>
+        </form>
+        <a href="#" id="infoLink">Показати кількість спрацьовувань події</a>
+    </div>
+    <div class="logo">
+        <img src="image1.jpg" alt="Logo Part 1">
+        <img src="image2.jpg" alt="Logo Part 2">
+        <img src="image3.jpg" alt="Logo Part 3">
+    </div>
+
+    <script src="lr4.js"></script>
+</body>
+</html>

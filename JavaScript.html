@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Завдання</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label, button, input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button.cancel {
+            background-color: #dc3545;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .date-time {
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .logo {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            transition: transform 0.3s;
+        }
+
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Форма для введення</h2>
+        <form id="inputForm">
+            <label for="inputField">Введіть значення:</label>
+            <input type="text" id="inputField" name="inputField">
+            <button type="button" id="okButton">ОК</button>
+            <button type="button" class="cancel" id="cancelButton">ОТМЕНА</button>
+        </form>
+        <a href="#" id="infoLink">Показати кількість спрацьовувань події</a>
+    </div>
+
+    <div class="date-time" id="dateTime">
+        <!-- Поточна дата буде вставлена через JavaScript -->
+    </div>
+
+    <div class="logo">
+        <img src="./Images/Anti-LGBT11.png" alt="Part 1" class="logo-part" id="logoPart1">
+    </div>
+
+    <script src="lr4.js"></script>
+</body>
+</html>
